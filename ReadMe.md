@@ -4,12 +4,12 @@
 
 1. 下載此專案
     ```
-    > git clone http://10.21.21.12/react/Simple_React.git
+    > git clone 專案
     ```
 2. 進入專案
 
     ```
-    > cd sqlschemainfo
+    > cd 專案
     ```
 
 3. 安裝套件
