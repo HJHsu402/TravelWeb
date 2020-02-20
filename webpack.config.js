@@ -2,7 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const TransferWebpackPlugin = require('transfer-webpack-plugin')
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/index.jsx",
   mode: "development",
   module: {
     rules: [{
@@ -20,7 +20,10 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ["*", ".js", ".jsx"]
+    extensions: ["*", ".js", ".jsx"],
+    alias: {
+            Config: __dirname + '/config.json'
+        }
   },
   output: {
     path: path.resolve(__dirname, "dist/"),

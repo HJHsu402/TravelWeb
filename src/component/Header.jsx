@@ -4,7 +4,7 @@ export default class Header extends Component {
     render() {
         return (
             <div className="header">
-                <h3>我是 Header</h3>
+                <h3>台灣景點介紹</h3>
             </div>
         )
     }
