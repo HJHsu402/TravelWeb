@@ -9,9 +9,9 @@ export default class Sidebar extends Component {
         }
     }
     async componentDidMount() {
-        const apijson=  await api({ data: { method: "get_鄉鎮市區", CID: 0 } })
+        const apijson=  await api({cmd:"subclass" ,data: { PCID: 0 } })
         if(apijson.ok){
-            this.setState({data:apijson.body.ItemSet.ODetail})
+            this.setState({data:apijson.body.data})
         }
         
     }
@@ -51,11 +51,11 @@ class SidebarItem extends Component {
             this.setState({ open: !this.state.open })
         }
         else {
-            const apijson=  await api({ data: { method: "get_鄉鎮市區", CID: cid } })
+         
+            const apijson=  await api({cmd:"subclass" ,data: { PCID: cid} })
             if(apijson.ok){
-                this.setState({data:apijson.body.ItemSet.ODetail,isfetched:true})
+                this.setState({data:apijson.body.data,isfetched:true})
             }
-
         }
 
     }

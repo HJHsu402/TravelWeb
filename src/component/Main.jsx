@@ -17,9 +17,9 @@ export default class Main extends Component {
     async componentDidUpdate() {
         const { cid } = this.props
         if (this.state.cid != cid) {
-            const apijson = await api({ data: { method: "get_該鄉鎮市區底下景點", CID: cid } })
+            const apijson = await api({cmd:'objectlist', data: { CID: cid } })
             if (apijson.ok) {
-                this.setState({ data: apijson.body.ItemSet.ODetail, cid: cid })
+                this.setState({ data: apijson.body.data, cid: cid })
             }
         }
 

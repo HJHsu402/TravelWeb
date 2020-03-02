@@ -27,13 +27,14 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist/"),
-    publicPath: "/dist/",
+    publicPath: '/',
     filename: "bundle.js"
   },
   devServer: {
     contentBase: path.join(__dirname, "www/"),
     port: 3000,
     publicPath: "http://localhost:3000/dist/",
+    contentBase: './dist',
     hotOnly: true
   },
   plugins: [

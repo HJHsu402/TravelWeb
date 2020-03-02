@@ -10,13 +10,12 @@ export default class ObjectDetail extends Component {
     }
     async componentDidMount() {
         const { selectOID } = this.props
-        const apijson = await api({ data: { method: "get_景點資訊", OID: selectOID } })
+        const apijson = await api({ cmd :"object",data: {  OID: selectOID } })
         if (apijson.ok) {
-            this.setState({ data: apijson.body.ItemSet.ODetail[0] })
+            this.setState({ data: apijson.body.data[0] })
         }
     }
     render() {
-        const { selectOID } = this.props
         const { data } = this.state
         return (
             <div className="object_detail">
