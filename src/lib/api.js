@@ -5,7 +5,7 @@ import {
 } from 'Config'
 
 export default function ({
-	cmd='',
+	cmd = '',
 	method = 'GET',
 	type = 'json',
 	data = {},
@@ -15,7 +15,7 @@ export default function ({
 	method = method.toUpperCase()
 	type = type.toLowerCase()
 	let url = `${apiurl}/${cmd}`
-	let cors= false
+	let cors = false
 	let option = {
 		method,
 		headers: {
@@ -41,33 +41,33 @@ export default function ({
 			break;
 	}
 	return axios({
-			method,
-			url,
-			...option,
-			withCredentials: !!cors,
-		}).then((res) => {
-			return	{
-				ok:res.statusText=='OK',
-				status:res.status,
-				body:res.data
-			}
-			})
+		method,
+		url,
+		...option,
+		withCredentials: !!cors,
+	}).then((res) => {
+		return {
+			ok: res.statusText == 'OK',
+			status: res.status,
+			body: res.data
+		}
+	})
 		.catch(err => {
-			let res =err.response
-			if(res){
+			let res = err.response
+			if (res) {
 				return {
-				ok:res.statusText=='OK',
-				status:res.status,
-				body:res.data
+					ok: res.statusText == 'OK',
+					status: res.status,
+					body: res.data
 				}
 			}
 			else {
 				return {
-				ok:false,
-				status:404,
-				body:err.message
+					ok: false,
+					status: 404,
+					body: err.message
 				}
 			}
-			
+
 		})
 }

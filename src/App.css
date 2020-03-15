@@ -1,14 +1,16 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: '微軟正黑體';
+  font-family: "微軟正黑體";
 }
+
 html,
 body,
 #root {
   height: 100%;
   background-color: #efefef;
 }
+
 .App {
   display: flex;
   flex-direction: column;
@@ -26,6 +28,7 @@ body,
   font-weight: bold;
   background-color: #008000;
 }
+
 .content {
   display: flex;
   overflow: hidden;
@@ -44,23 +47,20 @@ body,
   padding: 3px 0 3px 15px;
   transition: all;
 }
-@keyframes fadeIn
-{
+
+@keyframes fadeIn {
   from {
     opacity: 0;
   }
-       
-    to{
-      opacity: 1;
-    }
-       
 
+  to {
+    opacity: 1;
+  }
 }
-    
-.fade-in{
+
+.fade-in {
   animation: fadeIn 0.5s ease-in;
 }
-
 
 .sidebar * {
   width: 100%;
@@ -75,6 +75,7 @@ body,
   font-weight: bolder;
   cursor: pointer;
 }
+
 .sidebar span:hover {
   background-color: #52e4e9;
   font-size: 17px;
@@ -114,12 +115,9 @@ body,
   color: white;
 }
 
-
-.select{
+.select {
   background-color: #ff3131;
 }
-
-
 
 .lightbox {
   position: fixed;
@@ -130,9 +128,10 @@ body,
   display: -webkit-box;
   display: flex;
   overflow: hidden;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
-.lightbox >.lightbox_content {
+
+.lightbox>.lightbox_content {
   margin: auto;
   width: 40%;
   max-height: 70%;
@@ -144,7 +143,8 @@ body,
   flex-direction: column;
   overflow: hidden;
 }
-.lightbox >.lightbox_content >h4 {
+
+.lightbox>.lightbox_content>h4 {
   flex-shrink: 0;
   text-align: center;
   background-color: #ace;
@@ -153,30 +153,31 @@ body,
   border-radius: 5px 5px 0 0;
   min-height: 16px;
 }
-.lightbox >.lightbox_cover {
+
+.lightbox>.lightbox_cover {
   width: 100%;
   height: 100%;
   position: absolute;
   cursor: pointer;
 }
 
-
-.object_detail{
+.object_detail {
   padding: 5px;
   overflow: auto;
 }
-.object_detail div{
+
+.object_detail div {
   padding: 5px;
   font-size: 16px;
 }
 
-.object_detail b{
+.object_detail b {
   font-size: 19px;
   margin: 3px;
 }
 
-.notfound{
-  flex :1;
+.notfound {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,8 +185,8 @@ body,
   font-weight: bolder;
 }
 
-.navbar{
-  margin: 5px ;
+.navbar {
+  margin: 5px;
   border: solid 1px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   box-sizing: border-box;
