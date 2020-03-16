@@ -1,5 +1,8 @@
-import React from "react"
+import React, { Component } from "react"
 
-export default function Footer() {
-	return <div className="footer">我是 Footer</div>
+export default class Footer extends Component {
+	render() {
+		const { Cname } = this.props
+		return <div className="footer">{Cname}</div>
+	}
 }
