@@ -11,7 +11,7 @@ class App extends Component {
 			<div className="App">
 				<Header></Header>
 				<Content></Content>
-				<Footer name="© WKE 2020" ></Footer>
+				<Footer Cname="© WKE 2020" ></Footer>
 			</div>
 		)
 	}
