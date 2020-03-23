@@ -39,13 +39,16 @@ export default class Main extends Component {
 	}
 
 	render() {
-		const { data, openlightbox, selectOID } = this.state
+		const { CID, data, openlightbox, selectOID } = this.state
 		if (!data.length) return <div className="notfound">尚無資料</div>
 		return (
 			<div className="main">
 				{openlightbox && (
 					<Lightbox coverClick={this.oncloslightbox} title="描述">
-						<ObjectDetail selectOID={selectOID}></ObjectDetail>
+						<ObjectDetail
+							selectOID={selectOID}
+							selectCID={CID}
+						></ObjectDetail>
 					</Lightbox>
 				)}
 				<table className="objtable">
