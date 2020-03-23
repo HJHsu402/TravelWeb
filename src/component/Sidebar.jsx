@@ -25,7 +25,7 @@ export default class Sidebar extends Component {
 						<SidebarItem
 							onClickCID={onClickCID}
 							key={d.CID}
-							cid={d.CID}
+							CID={d.CID}
 							data={d}
 							selectCID={selectCID}
 						></SidebarItem>

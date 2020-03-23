@@ -6,20 +6,20 @@ export default class Content extends Component {
         super(props)
 
         this.state = {
-            cid: 0
+            CID: 0
         }
     }
 
-    onClickCID = cid => {
-        this.setState({ cid })
+    onClickCID = CID => {
+        this.setState({ CID })
     }
     render() {
         return (
             <div className="content">
                 <Sidebar
                     onClickCID={this.onClickCID}
-                    selectCID={this.state.cid}></Sidebar>
-                <Main cid={this.state.cid}></Main>
+                    selectCID={this.state.CID}></Sidebar>
+                <Main CID={this.state.CID}></Main>
             </div>
         )
     }

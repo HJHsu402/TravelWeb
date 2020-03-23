@@ -7,7 +7,7 @@ export default class Main extends Component {
 		super(props)
 
 		this.state = {
-			cid: 0,
+			CID: 0,
 			data: [],
 			openlightbox: false,
 			selectOID: 0
@@ -15,11 +15,11 @@ export default class Main extends Component {
 	}
 
 	async componentDidUpdate() {
-		const { cid } = this.props
-		if (this.state.cid != cid) {
-			const apijson = await api({ cmd: "objectlist", data: { CID: cid } })
+		const { CID } = this.props
+		if (this.state.CID != CID) {
+			const apijson = await api({ cmd: "objectlist", data: { CID: CID } })
 			if (apijson.ok) {
-				this.setState({ data: apijson.body.data, cid: cid })
+				this.setState({ data: apijson.body.data, CID: CID })
 			}
 		}
 	}

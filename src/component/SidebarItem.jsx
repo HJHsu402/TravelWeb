@@ -13,12 +13,12 @@ export default class SidebarItem extends Component {
 
 	onClickhandle = async e => {
 		e.stopPropagation()
-		const { cid, onClickCID } = this.props
-		onClickCID(cid)
+		const { CID, onClickCID } = this.props
+		onClickCID(CID)
 		if (this.state.isfetched) {
 			this.setState({ open: !this.state.open })
 		} else {
-			const apijson = await api({ cmd: "subclass", data: { PCID: cid } })
+			const apijson = await api({ cmd: "subclass", data: { PCID: CID } })
 			if (apijson.ok) {
 				this.setState({ data: apijson.body.data, isfetched: true })
 			}
@@ -40,7 +40,7 @@ export default class SidebarItem extends Component {
 						{this.state.data.map(d => (
 							<SidebarItem
 								key={d.CID}
-								cid={d.CID}
+								CID={d.CID}
 								data={d}
 								onClickCID={onClickCID}
 								selectCID={selectCID}
