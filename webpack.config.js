@@ -40,7 +40,8 @@ module.exports = {
     contentBase: path.join(__dirname, "www/"),
     port: 3000,
     publicPath: "http://localhost:3000/",
-    contentBase: './',
+    contentBase: '/',
+    historyApiFallback:true,
     hotOnly: true
   },
   plugins: [
